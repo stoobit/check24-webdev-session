@@ -1,0 +1,24 @@
+services:
+  frontend:
+    image: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: frontend-dev
+    ports:
+      - "3003:3000"
+    volumes:
+      - ./frontend:/app
+    environment:
+      NODE_ENV: development
+
+  backend:
+    image: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: backend-dev
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./backend:/app
