@@ -2,7 +2,6 @@
 
 import InputField from "@/app/components/atoms/InputField";
 import Button from "@/app/components/atoms/Button";
-import Card from "@/app/components/atoms/Card";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 

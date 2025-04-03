@@ -14,13 +14,18 @@ export default function Home() {
      */
 
     return (
-        <div className="flex flex-col gap-4">
-            <h1>Welcome to the CHECK24 Shop!</h1>
+        <center>
+            <div className="flex flex-col gap-4" style={{ width: "200px", padding: "20px" }}>
+                <div style={{ width: "200px" }}>
+                    <h1 style={{fontSize: "22px", fontWeight: "bold"}}>Wilkommen</h1>
+                </div>
 
-            <div className="flex flex-col items-start">
-                <Link href="/register">Register here</Link>
-                <Link href="/login">Login here</Link>
+                <div className="flex flex-col items-start">
+                    <Link href="/register" className="bg-blue-900 text-white p-2 rounded" style={{ width: "200px" }}>Registrieren</Link>
+                    <div style={{ height: "10px" }}></div>
+                    <Link href="/login" className="bg-blue-900 text-white p-2 rounded" style={{ width: "200px" }}>Einloggen</Link>
+                </div>
             </div>
-        </div>
+        </center>
     )
 }
