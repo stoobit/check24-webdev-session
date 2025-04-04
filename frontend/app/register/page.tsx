@@ -4,6 +4,7 @@ import InputField from "@/app/components/atoms/InputField";
 import Button from "@/app/components/atoms/Button";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
+import { storeToken } from "../utils/authentication";
 
 export default function Page() {
     const router = useRouter();
@@ -36,7 +37,8 @@ export default function Page() {
                 return response.json();  
             })
             .then(data => {
-                localStorage.setItem('authToken', data.token);
+                storeToken(data.token)
+                router.push("/shop")
             })
             .catch(error => {
                 setError(true)
